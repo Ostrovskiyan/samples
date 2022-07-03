@@ -34,7 +34,10 @@ public class Tree<T extends Comparable<T>> implements Iterable<T> {
             this.value = value;
         }
 
-        public Node(T value, Node parent) {
+        public Node(
+            T value,
+            Node parent
+        ) {
             this.value = value;
             this.parent = parent;
         }
@@ -94,7 +97,7 @@ public class Tree<T extends Comparable<T>> implements Iterable<T> {
 
     public class DeepIterator implements Iterator<T> {
 
-        private Node node;
+        private final Node node;
         private DeepIterator left;
         private DeepIterator right;
         private boolean currentNodeProcessed;
